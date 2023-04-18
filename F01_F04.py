@@ -80,7 +80,7 @@ def summonJin(dataJin):
                         print("Menyerahkan sesajen...")
                         print("Membacakan mantra...")
                         print("")
-                        print("Jin Ïfrit berhasil dipanggil!")
+                        print("Jin",Jusn,"berhasil dipanggil!")
 
                         return dataJin
                     
