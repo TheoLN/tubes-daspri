@@ -2,8 +2,8 @@
 MARK = "\mark"
 NMAX = 111
 
-def Marked(string : str) :
-    return str(string) == str(MARK)
+def Marked(arr) :
+    return arr == MARK
 
 def my_length(array : list ,i = 0):
     if Marked(array[i]):
@@ -99,5 +99,5 @@ def isAvailable(x, array): #check username availibility in matrix
 # ***TESTING***
 #print(tail([1,2,3,4,5,MARK]))
 #print(my_delArray(tail([1,2,3,4,5,MARK]),4))
-print(my_count(5,[1,2,3,4,5,5,6,7,MARK,None,None]))
+#print(my_count(5,[1,2,3,4,5,5,6,7,MARK,None,None]))
 
