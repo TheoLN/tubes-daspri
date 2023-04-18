@@ -27,7 +27,7 @@ if __name__ == '__main__' :
         print("Cara penggunaan : python main.py <nama_folder>")
         exit()
     else :
-        loaded_folder = load(args.folder)   ##loaded folder akan menyimpan path file
+        loaded_folder = f.load(args.folder)   ##loaded folder akan menyimpan path file
 
 # I N I T I A L    S T A T E 
 dataUser = [[None for i in range (3)] for i in range (u.NMAX)]
