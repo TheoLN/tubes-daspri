@@ -95,6 +95,19 @@ def isAvailable(x, array): #check username availibility in matrix
             continue
     return True
 
+def lcg(seed):
+    a = 1103515245
+    c = 12345
+    m = 2**31
+    x = seed
+    while True:
+        x = (a * x + c) % m
+        yield x
+
+def rng():
+    gen = lcg(seed=42)
+    return 1 + next(gen) % 5
+
     
 
 
