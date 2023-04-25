@@ -58,9 +58,39 @@ while True:
 
     elif command == "hilangkanJin":
         dataUser = f.hilangkanJin(dataUser)
+        
+        
+        
+        
+        
+        
+        
+        
     
-
-
+    #F09
+    elif command == "laporanjin":
+            if role == "bandung_bondowoso":
+                laporanjin()
+            else:
+                print("laporanjin hanya dapat diakses oleh akun Bandung Bondowoso.")
+    #F10
+    elif command ==  "laporancandi":
+            if role == "bandung_bondowoso":
+                laporancandi()
+            else:
+                print("laporancandi hanya dapat diakses oleh akun Bandung Bondowoso.")
+    #F11
+    elif command == "hancurkancandi":
+            if role == "roro_jonggrang":
+                hancurkancandi()
+            else:
+                print("hancurkancandi hanya dapat diakses oleh akun Roro Jonggrang.")
+    #F12
+    elif command == "ayamberkokok":
+            if role == "ayamberkokok":
+                ayamberkokok()
+            else:
+                print("ayamberkokok hanya dapat diakses oleh akun Roro Jonggrang.")
     
 
 
