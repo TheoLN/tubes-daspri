@@ -1,40 +1,37 @@
 ### COMMON CASE FUNCTIONS
-import os
 MARK = "\mark"
 NMAX = 111
-loaded_folder = ""  ##folder yang diload program
 
+def Marked(arr) :
+    return arr == MARK
 
-
-def baca_file(nama_file, loaded_folder) :
-    f=open(os.path.join(loaded_folder, nama_file),'r')
-    return f
-##Cara pake baca_file
-##|f = baca_file("user.csv", loaded_folder)| (nanti ngeopenfile user.csv di folder yang diload ) 
-
-def Marked(string : str) :
-    return str(string) == str(MARK)
-
-def my_length(array : list,i =0 ):
-    
-    if Marked(array[i]) :
+def my_length(array : list ,i = 0):
+    if Marked(array[i]):
         return i
     else:
         return my_length(array,i+1)
 
-def attach(array : list ,x,i=0):
-    if array[i] == MARK:
+def attach(array : list ,x,i = 0):
+    if str(array[i]) == str(MARK):
         array[i], array[i + 1] = x, MARK
         return array
     else:
-        return attach(array,x,i+1)
+       return attach(array,x,i+1)
+
+def konsdot(x, array : list):
+    for i in range (my_length(array),-1,-1):
+        array[i+1]=array[i]
+    array[0] = x
+    return array
+        
+
 
 def head(arr : list) :
     return arr[0]
 
 def tail(arr : list):
-    temp = [0 for i in range (my_length(arr)+1)]
-    temp[my_length(arr)-1] = MARK
+    temp = [None for i in range (NMAX)]
+    temp[0] = MARK
     for i in range (1,my_length(arr)):
         attach(temp,arr[i])
     return temp
@@ -43,9 +40,9 @@ def my_delArray (array : list, x):
     if array == []:
         return []
     elif array [0] == x:
-        return array[1:]
+        return tail(array)
     else:
-        return [array[0]] + my_delArray(array[1:],x)
+        return konsdot(array[0],my_delArray(tail(array),x))
 
 
 def my_strip(string : str, str):
@@ -72,9 +69,15 @@ def my_count(x, array:list):
     if array == []:
         return 0
     elif array[0] != x :
-        return 0 + my_count(x, array[1:])
+        if my_length(array) > 1:
+            return 0 + my_count(x, tail(array))
+        else: 
+            return 0
     else:
-        return 1 + my_count(x, array[1:])
+        if my_length(array) > 1:
+            return 1 + my_count(x, tail(array))
+        else:
+            return 1
 
 
 
@@ -93,8 +96,8 @@ def isAvailable(x, array): #check username availibility in matrix
     
 
 
-
-
-
-
+# ***TESTING***
+#print(tail([1,2,3,4,5,MARK]))
+#print(my_delArray(tail([1,2,3,4,5,MARK]),4))
+#print(my_count(5,[1,2,3,4,5,5,6,7,MARK,None,None]))
 

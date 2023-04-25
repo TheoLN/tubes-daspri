@@ -27,12 +27,13 @@ if __name__ == '__main__' :
         print("Cara penggunaan : python main.py <nama_folder>")
         exit()
     else :
-        loaded_folder = load(args.folder)   ##loaded folder akan menyimpan path file
+        loaded_folder = f.load(args.folder)   ##loaded folder akan menyimpan path file
 
 # I N I T I A L    S T A T E 
 dataUser = [[None for i in range (3)] for i in range (u.NMAX)]
 dataUser[0] = u.MARK
 loggedIn = [None, None]
+
 #dataCandi = ....
 
 dataUser = u.attach(dataUser, c.my_csvread("user.csv") )
@@ -43,11 +44,13 @@ while True:
     #F01 - Login
     if command == "logIn":
         loggedIn = f.logIn(dataUser, loggedIn)
+        
     
     #F02 - LogOut
 
     elif command == "logOut":
         loggedIn = f.logout(loggedIn)
+        
 
     #F03 - summonJIn
     
@@ -60,26 +63,4 @@ while True:
         dataUser = f.hilangkanJin(dataUser)
     
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-    
+    #
