@@ -12,7 +12,7 @@ def my_length(array : list ,i = 0):
         return my_length(array,i+1)
 
 def attach(array : list ,x,i = 0):
-    if str(array[i]) == str(MARK):
+    if Marked(array[i]):
         array[i], array[i + 1] = x, MARK
         return array
     else:
@@ -46,17 +46,19 @@ def my_delArray (array : list, x):
 
 
 def my_strip(string : str, str):
-    i = 0
+
     array = list(string)
-    while i < my_length(array):
-        if array[i] == str:
-            my_delArray(array, array[i])
-            
+
+    i = 0
+    j = array[i]
+    newstring = ""
+    while j != str:
+        newstring += j
         i += 1
-    newstring =""
-    for i in range (0, my_length(array)):
-        newstring += array[i]
+        j = array[i]
+    
     return newstring
+
 
 def isElmt(x,array: list):
     for i in range(my_length(array)):
@@ -92,6 +94,19 @@ def isAvailable(x, array): #check username availibility in matrix
         else:
             continue
     return True
+
+def lcg(seed):
+    a = 1103515245
+    c = 12345
+    m = 2**31
+    x = seed
+    while True:
+        x = (a * x + c) % m
+        yield x
+
+def rng():
+    gen = lcg(seed=42)
+    return 1 + next(gen) % 5
 
     
 
