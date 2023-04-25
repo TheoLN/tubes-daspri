@@ -5,18 +5,29 @@ def my_csvread(file):
     rawD[0] = u.MARK
     
     for line in open (file):
-        rawD = u.attach(rawD, u.my_strip(line, "\n"))
-    Data = [[] for j in range ((u.my_length(rawD))-1)]
-
-    for i in range (1, u.my_length(rawD)):
+        rawD = u.attach(rawD,line)
+    print(rawD)
+    Data = [[None for i in range (5)] for i in range (u.my_length(rawD)-1)]
+    for i in range (1,u.my_length(rawD)):
         Dstr = ""
-        for j in rawD[i]:
-            if j != ";":
-                Dstr += j
+        j = 0
+        k = rawD[i][j]
+        c = 0
+        while k != "\n":
+            print(k)
+            if k != ";":
+                Dstr += k
             else:
-                Data[i-1] = u.attach(Data[i-1],Dstr)
-            Dstr = ""
-        Data[i-1] = u.attach(Data[i-1],Dstr)
-
+                Data[i-1][c] = Dstr
+                c += 1
+                Dstr = ""
+            j += 1
+            k = rawD[i][j]
+        if k == "\n":
+            Data[i-1][c] = Dstr
+    
     return Data
+
 # return dalam bentuk nested list 
+
+#print(my_csvread("user.csv"))
