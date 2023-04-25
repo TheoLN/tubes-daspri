@@ -1,9 +1,9 @@
 from F13_14 import save
 
-def exit_program () :
+def exit_program (dataBahan,dataCandi,dataUser) :
     choice = str(input("Apakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) :"))
     if choice == 'y' or choice =='Y' :
-        save()
+        save(dataBahan,dataCandi,dataUser)
         exit()
     elif choice =='N' or choice=='n' :
         exit()
@@ -14,7 +14,7 @@ def exit_program () :
 
 def help(username) :
     print("=========== HELP ===========")
-    if username ==[None,None] :
+    if username ==[None,None] or username == None:
         print("1. login")
         print("     Untuk masuk menggunakan akun")
         print("2. exit")

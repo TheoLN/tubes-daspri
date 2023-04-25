@@ -11,12 +11,19 @@ def my_length(array : list ,i = 0):
     else:
         return my_length(array,i+1)
 
-def attach(array : list ,x,i = 0):
+def attach(array  ,x,i = 0):
     if Marked(array[i]):
         array[i], array[i + 1] = x, MARK
         return array
     else:
        return attach(array,x,i+1)
+    
+def initial(array, M,) :
+    for i in range(my_length(M)) :
+        array[i], array[i+1] = M[i], MARK
+    return array
+
+
 
 def konsdot(x, array : list):
     for i in range (my_length(array),-1,-1):
@@ -115,4 +122,6 @@ def rng():
 #print(tail([1,2,3,4,5,MARK]))
 #print(my_delArray(tail([1,2,3,4,5,MARK]),4))
 #print(my_count(5,[1,2,3,4,5,5,6,7,MARK,None,None]))
+
+
 

@@ -1,5 +1,8 @@
 from csvparser import*
 from Utilities import*
-k=my_csvread("bahan_bangunan.csv")
-print(k)
+
+y =[5,4,5,6,7,MARK,0]
+x =[9,8,9,MARK]
+
+print(attach(y,x))
 

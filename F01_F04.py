@@ -8,7 +8,7 @@ def logIn(dataUser : list, loggedIn : list):
     pw = input("Masukkan password: ")
 
     i = 0
-    if loggedIn != [None,None]:
+    if loggedIn == [None,None]:
         while i < u.my_length(dataUser):
             if dataUser[i][0] == usn: #ngecek dataUser
                 if dataUser[i][1] == pw:
@@ -27,7 +27,7 @@ def logIn(dataUser : list, loggedIn : list):
         return loggedIn
     else: 
         print("Login gagal!")
-        print("Anda telah login dengan username Bandung, silahkan lakukan “logout” sebelum melakukan login kembali.")
+        print("Anda telah login dengan username ",loggedIn[0],"silahkan lakukan “logout” sebelum melakukan login kembali.")
         return loggedIn
     
 #F02 -- LogOut

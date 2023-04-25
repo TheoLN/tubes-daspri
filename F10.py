@@ -1,6 +1,6 @@
 from Utilities import *
-def laporancandi ():
-    global data_candi
+def laporancandi (data_candi):
+    
     
     totalCandi=0
     TotalPasir=0
@@ -29,4 +29,4 @@ def laporancandi ():
             if harga_total[j] < harga_total[j + 1]:
                 harga_total[j],harga_total[j+1]=harga_total[j+1],harga_total[j]
     print(f"ID Candi termurah: {harga_total[0][0]}")
-laporancandi()
+#laporancandi()

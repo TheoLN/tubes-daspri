@@ -1,4 +1,4 @@
-from main2 import *
+
 from Utilities import *
 from csvparser import *
 
@@ -60,4 +60,4 @@ def laporanjin(user,bahan,candi):
     print(f"> Jumlah Batu: {bahan[2][2]} unit")
     return
 
-laporanjin(username, bahan_bangunan, data_candi)
+#laporanjin(data_user, bahan_bangunan, data_candi)

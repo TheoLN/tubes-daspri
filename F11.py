@@ -1,9 +1,9 @@
 from csvparser import *
 from Utilities import *
-from main2 import *
 
-def HancurkanCandi () :
-    global data_candi
+
+def HancurkanCandi (data_candi) :
+    
     id = int(input("Masukkan ID candi : "))
     count = 0
     for i in range (1,101):
@@ -29,5 +29,5 @@ def HancurkanCandi () :
         i+=1
         if i==101:
             break
-HancurkanCandi()
-print(data_candi)
+#HancurkanCandi()
+#print(data_candi)
