@@ -38,6 +38,7 @@ def logout(loggedIn):
     else:
         print("Logout gagal!")
         print("Anda belum login, silahkan login terlebih dahulu sebelum melakukan logout")
+    return loggedIn
 
 #F03 -- SummonJin
 
