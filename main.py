@@ -21,7 +21,7 @@ parser.add_argument('folder',type=str,nargs="?",help='folder yang ingin diload')
 args = parser.parse_args()
 
 #algoritma
-print ("loading . . .",end="")
+print ("loading . . .")
 
 
 if __name__ == '__main__' :

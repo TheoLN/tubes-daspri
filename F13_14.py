@@ -28,7 +28,7 @@ def load(folder) :
             exit()
         else :
             print ("Selamat datang di program \"Membangun Candi\"")
-            print ("Silahkan masukkan username anda")
+            print ("Silahkan melakukan login atau input help untuk bantuan")
             return(path_for_folder_in_save)
 
     else :
