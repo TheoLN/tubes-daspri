@@ -73,11 +73,14 @@ def summonJin(dataJin):
             if u.isAvailable(Jusn,dataJin):
 
                 while True:
-                    Jpw = str(input("Masukkan password jin: "))
-
-                    if u.my_length(Jpw) >= 5 and u.my_length(Jpw) <= 25:
+                    Jpw = str(input("Masukkan password jin: ")) + u.MARK
+                    i = 0
+                    k = Jpw[i]
+                    while k != "\\"  
+                        i += 1
+                        k = Jpw[i]
+                    if i >= 5 and i <= 25:
                         u.attach(dataJin, [Jusn, Jpw, Jenis])
-
                         print("Mengumpulkan sesajen...")
                         print("Menyerahkan sesajen...")
                         print("Membacakan mantra...")
