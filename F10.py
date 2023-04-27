@@ -1,32 +1,48 @@
 from Utilities import *
-def laporancandi (data_candi):
-    
+from csvparser import *
+from main2 import *
+from fungsi import *
+
+def laporancandi ():
+    global data_candi
     
     totalCandi=0
     TotalPasir=0
     TotalBatu=0
     TotalAir=0
-    harga_total=[]
+    candiTermahal = 0
+    candiTermurah = 0
+    HargaTerbesar = -999999
+    harga_total = [[None for j in range (2)] for i in range(101)]
+    HargaTerkecil = 999999
     for i in range (1,101):
-        if data_candi[i]!=None:
+        if data_candi[i][1]!=None:
             totalCandi+=1
             TotalPasir+=int(data_candi[i][2])
             TotalBatu+=int(data_candi[i][3])
             TotalAir+=int(data_candi[i][4])
-            harga_total.attach([[i],[int(data_candi[i][2])*10000 +int(data_candi[i][3])*15000 +int(data_candi[i][4])*7500]])
-    for i in range(my_length(harga_total)):
-        for j in range(0, my_length(harga_total) - i - 1):
-            if harga_total[j] > harga_total[j + 1]:
-                harga_total[j],harga_total[j+1]=harga_total[j+1],harga_total[j]
-    print(harga_total)
-    print(f"> Total Candi: {totalCandi}")
-    print(f"> Total Pasir yang digunakan: {TotalPasir}")
-    print(f"> Total Batu yang digunakan: {TotalBatu}")
-    print(f"> Total Air yang digunakan: {TotalAir}")
-    print(f"ID Candi termahal: {harga_total[0][0]}")
-    for i in range(my_length(harga_total)):
-        for j in range(0, my_length(harga_total) - i - 1):
-            if harga_total[j] < harga_total[j + 1]:
-                harga_total[j],harga_total[j+1]=harga_total[j+1],harga_total[j]
-    print(f"ID Candi termurah: {harga_total[0][0]}")
-#laporancandi()
+            harga_total[i][0] = int(data_candi[i][2])*10000 +int(data_candi[i][3])*15000 +int(data_candi[i][4])*7500
+            harga_total[i][1] = data_candi[i][0]   
+    for i in range (101) :
+        if harga_total[i][0]!= None and harga_total[i][0] >= HargaTerbesar :
+            HargaTerbesar = harga_total[i][0]
+            candiTermahal = data_candi[i][0]   
+    for i in range (101) :
+        if harga_total[i][0] != None and harga_total[i][0] < HargaTerkecil :
+            HargaTerkecil = harga_total[i][0]
+            candiTermurah = data_candi[i][0]   
+    if totalCandi == 0 :
+        print(f"> Total Candi: {totalCandi}")
+        print(f"> Total Pasir yang digunakan: {TotalPasir}")
+        print(f"> Total Batu yang digunakan: {TotalBatu}")
+        print(f"> Total Air yang digunakan: {TotalAir}")
+        print(f"ID Candi termahal: -")
+        print(f"ID Candi termurah: -")
+    else :
+        print(f"> Total Candi: {totalCandi}")
+        print(f"> Total Pasir yang digunakan: {TotalPasir}")
+        print(f"> Total Batu yang digunakan: {TotalBatu}")
+        print(f"> Total Air yang digunakan: {TotalAir}")
+        print(f"ID Candi termahal: {candiTermahal} ({HargaTerbesar})")
+        print(f"ID Candi termurah: {candiTermurah} ({HargaTerkecil})")
+laporancandi()
