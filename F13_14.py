@@ -28,13 +28,13 @@ def load(folder) :
             exit()
         else :
             print ("Selamat datang di program \"Membangun Candi\"")
-            print ("Silahkan melakukan login atau input help untuk bantuan")
+            print ("Silahkan melakukan login")
             return(path_for_folder_in_save)
 
     else :
     ##jika input yang dimasukkan lengkap pathnya (contoh : Save/16-3-2023) atau inputnya adalah initial
         print ("Selamat datang di program \"Membangun Candi\"")
-        print ("Silahkan masukkan username anda")
+        print ("Silahkan melakukan login")
         return(loaded_folder)
 
 
@@ -106,8 +106,8 @@ def save(dataBahan,dataCandi,dataUser) :
         print("saving .  .  .")
         create_file(folder,dataBahan,dataCandi,dataUser)
         print("Berhasil menyimpan data di Save/"+save_folder)
-    elif not cek_file(folder,dataBahan,dataCandi,dataUser) :
+    elif not cek_file(folder) :
         print("saving .  .  .")
-        create_file(folder) 
+        create_file(folder,dataBahan,dataCandi,dataUser) 
         
 

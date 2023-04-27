@@ -53,7 +53,7 @@ def summonJin(dataJin):
         print(" (1) Pengumpul - Bertugas mengumpulkan bahan bangunan")
         print(" (2) Pembangun - Bertugas membangun candi")
         while True:
-            Jenis = input("Masukkan nomor jenis jin yang dipanggil: ")
+            Jenis = int(input("Masukkan nomor jenis jin yang dipanggil: "))
 
             if Jenis == 1:
                 print("Memilih jin “Pengumpul”.")
@@ -97,7 +97,7 @@ def summonJin(dataJin):
 def hilangkanJin(dataJin):
     hapus = input("Masukkan username jin : ")
     for i in range (u.my_length(dataJin)):
-        if dataJin[i] == hapus:
+        if dataJin[i][0] == hapus:
             ans = str(input("Apakah anda yakin ingin menghapus jin dengan username Jin1 (Y/N)? "))
             if ans  == "Y" or ans == "y":
                 print("Jin telah berhasil dihapus dari alam gaib. ")

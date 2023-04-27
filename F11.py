@@ -1,9 +1,9 @@
 from csvparser import *
 from Utilities import *
-from main2 import *
 
-def HancurkanCandi () :
-    global data_candi
+
+def HancurkanCandi (data_candi) :
+    
     id = int(input("Masukkan ID candi : "))
     count = 0
     data_candi_temp = [[None for i in range (5)] for j in range(101)]
@@ -39,5 +39,5 @@ def HancurkanCandi () :
         data_candi[i][3] = data_candi_temp[i][3]
         data_candi[i][4] = data_candi_temp[i][4]
 
-HancurkanCandi()
-print(data_candi)
+#HancurkanCandi()
+#print(data_candi)

@@ -1,8 +1,8 @@
-from main2 import *
+
 from Utilities import *
 from csvparser import *
 
-def AyamBerkokok() :
+def AyamBerkokok(data_candi) :
     print("Kukuruyuk.. Kukuruyuk..")
     count = 0
     for i in range (100) :
@@ -15,4 +15,4 @@ def AyamBerkokok() :
         print("Selamat, Roro Jonggrang memenangkan permainan!")
         print("*Bandung Bondowoso angry noise*")
         print("Roro Jonggrang dikutuk menjadi candi.")
-AyamBerkokok()
+#AyamBerkokok()

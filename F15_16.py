@@ -23,7 +23,7 @@ def help(username) :
         print("   Untuk keluar dari akun yang digunakan sekarang")
         print("4. summonjin")
         print("   Untuk memanggil jin")
-        print("5. hapusjin")
+        print("5. hilangkanjin")
         print("   Untuk menghapus nama jin dari permainan")
         print("6. ubahjin")
         print("   Untuk mengubah role jin")

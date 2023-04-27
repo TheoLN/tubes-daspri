@@ -8,6 +8,7 @@ import argparse
 
 #COMMANDS
 import F01_F04 as f
+from F05 import *
 from F13_14 import *
 from F9 import *
 from F10 import *
@@ -38,7 +39,7 @@ dataUser = c.initial_data("user.csv",loaded_folder)
 dataCandi = c.initial_data("candi.csv",loaded_folder)
 dataBahan = c.initial_data("bahan_bangunan.csv", loaded_folder)
 
-
+role = ""
 
 loggedIn = [None, None]
 
@@ -63,18 +64,32 @@ while True:
     #F03 - summonJIn
     
     elif command == "summonjin":
-        dataUser = f.summonJin(dataUser)
+        if role == "bandung_bondowoso" :
+            dataUser = f.summonJin(dataUser)
+        else:
+            print("summonjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     
     #F04 - hilangkanJIn
 
     elif command == "hilangkanjin":
-        dataUser = f.hilangkanJin(dataUser)
+        if role =="bandung_bondowoso" :
+            dataUser = f.hilangkanJin(dataUser)
+        else:
+            print("hilangkanjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     
-
+    #F05 - ubahjin
+    elif command =="ubahjin" :
+        if role == "bandung_bondowoso" :
+              dataUser = ubahjin(dataUser)
+            
+             
+        else:
+                print("ubahjin hanya dapat diakses oleh akun Bandung Bondowoso.")
+         
     #F09
     elif command == "laporanjin":
             if role == "bandung_bondowoso":
-                laporanjin()
+                laporanjin(dataUser,dataBahan,dataCandi)
             else:
                 print("laporanjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     #F10
