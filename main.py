@@ -75,7 +75,7 @@ while True:
 
     elif command == "hilangkanjin":
         if role =="bandung_bondowoso" :
-            dataUser = f.hilangkanJin(dataUser)
+            dataUser, dataCandi = f.hilangkanJin(dataUser, dataCandi)
         else:
             print("hilangkanjin hanya dapat diakses oleh akun Bandung Bondowoso.")
 
