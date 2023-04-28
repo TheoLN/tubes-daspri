@@ -39,8 +39,9 @@ def head(arr : list) :
 def tail(arr : list):
     temp = [None for i in range (NMAX)]
     temp[0] = MARK
-    for i in range (1,my_length(arr)):
-        attach(temp,arr[i])
+    if my_length(arr) > 1:
+        for i in range (1,my_length(arr)):
+            temp = attach(temp,arr[i])
     return temp
     
 def my_delArray (array : list, x):
