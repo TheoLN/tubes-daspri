@@ -45,7 +45,7 @@ def create_file (path,dataBahan,data_candi,dataUser):
     
     with open (os.path.join(path,"bahan_bangunan.csv"),'w') as f:
         f.write("nama;deskripsi;jumlah"+"\n")
-        for i in range (my_length(dataBahan)) :
+        for i in range (3) :
             for j in range(3):
                 if j != 2 :
                     f.write(str(dataBahan[i][j])+";")

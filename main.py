@@ -16,6 +16,7 @@ from F11 import *
 from F15_16 import *
 from F12 import *
 from F06 import*
+from F08 import*
 
 ##argparse
 parser = argparse.ArgumentParser(description='Menjalankan program membangun candi')
@@ -89,7 +90,7 @@ while True:
     #F06 - bangun(jin pembangun)
     elif command == "bangun" :
         if role == "jin_pembangun" :
-            print(loggedIn[0])
+            
             dataBahan, dataCandi  = bangun(loggedIn[0],dataBahan,dataCandi)
             
         else : 
@@ -102,6 +103,20 @@ while True:
 
         else :
              print("kumpul hanya dapat diakses jin pengumpul")
+            
+    #F08 - batchbangun/batchkumpul
+    elif command== "batchbangun" :
+        if role == "bandung_bondowoso" :
+            batchBangun(dataUser,dataBahan)
+        else :
+            print("batchbangun hanya dapat diakses Bondowoso")
+    
+    elif command == "batchkumpul" :
+        if role == "bandung_bondowoso" :
+            dataBahan = batchKumpul(dataUser,dataBahan) 
+        else :
+            print("batchkumpul hanya dapat diakses Bondowoso")
+              
          
     #F09
     elif command == "laporanjin":
