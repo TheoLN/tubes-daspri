@@ -1,6 +1,3 @@
-
-from Utilities import *
-from csvparser import *
 def jumlahTakNone (x) :
     count = 0
     for i in range (100) :
@@ -32,8 +29,7 @@ def laporanjin(user,bahan,candi):
     print(f"> Total Jin Pengumpul: {totJinkumpul}")
     print(f"> Total Jin Pembangun: {totJinBangun}")
 
-    for i in range(0,100) :
-        print(candi[i])
+    for i in range(100) :
         for j in range(jumlahTakNone(pembuat)+1) :
             if candi[i][1] != None and candi[i][1] == pembuat[j][0] :
                 pembuat[j][1] += 1
@@ -70,5 +66,3 @@ def laporanjin(user,bahan,candi):
     print(f"> Jumlah Air: {bahan[1][2]} unit")
     print(f"> Jumlah Batu: {bahan[2][2]} unit")
     return
-
-#laporanjin(username, bahan_bangunan, data_candi)

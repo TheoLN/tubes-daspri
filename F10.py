@@ -2,8 +2,8 @@ from Utilities import *
 from csvparser import *
 
 
-def laporancandi ():
-    global data_candi
+def laporancandi (data_candi):
+    
     
     totalCandi=0
     TotalPasir=0
@@ -14,7 +14,7 @@ def laporancandi ():
     HargaTerbesar = -999999
     harga_total = [[None for j in range (2)] for i in range(101)]
     HargaTerkecil = 999999
-    for i in range (1,101):
+    for i in range (0,100):
         print (data_candi[i])
         if data_candi[i][1]!=None:
             totalCandi+=1
