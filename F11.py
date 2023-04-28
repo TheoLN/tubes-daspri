@@ -7,9 +7,9 @@ def HancurkanCandi (data_candi) :
     id = int(input("Masukkan ID candi : "))
     count = 0
     data_candi_temp = [[None for i in range (5)] for j in range(101)]
-    for i in range (1,101):
+    for i in range (0,100):
         if data_candi[i][0]!=None and int(data_candi[i][0]) == id :
-            jawab = str(input("Apakah anda yakin ingin menghancurkan candi ID: "))
+            jawab = str(input("Apakah anda yakin ingin menghancurkan candi ID(Y/N): "))
             count = 1
             if jawab == 'Y' or jawab == 'y' :
                 data_candi[i][0] = None
@@ -23,7 +23,7 @@ def HancurkanCandi (data_candi) :
         return
     j = 0
     
-    for i in range(101) :
+    for i in range(100) :
         if data_candi[i][0] != None  :
             data_candi_temp[j][0] = data_candi[i][0]
             data_candi_temp[j][1] = data_candi[i][1]
@@ -32,7 +32,7 @@ def HancurkanCandi (data_candi) :
             data_candi_temp[j][4] = data_candi[i][4]
             j += 1
 
-    for i in range(101):
+    for i in range(100):
         data_candi[i][0] = data_candi_temp[i][0]
         data_candi[i][1] = data_candi_temp[i][1]
         data_candi[i][2] = data_candi_temp[i][2]

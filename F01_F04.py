@@ -77,7 +77,7 @@ def summonJin(dataJin):
                     temp = Jpw + u.MARK
                     i = 0
                     k = temp[i]
-                    while k != "\\"  
+                    while k != "\\"  :
                         i += 1
                         k = temp[i]
                     if i >= 5 and i <= 25:
