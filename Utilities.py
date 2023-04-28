@@ -1,5 +1,5 @@
 ### COMMON CASE FUNCTIONS
-MARK = "\mark"
+MARK = "\\mark"
 NMAX = 111
 
 def Marked(arr) :
