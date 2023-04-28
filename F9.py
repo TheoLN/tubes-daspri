@@ -44,7 +44,6 @@ def laporanjin(user,bahan,candi):
                     pembuat[nomor][1] = 1
                     nomor += 1
                     break      
-    print(pembuat)
     terkecil = 999999
     terbesar = -999999
     for i in range (jumlahTakNone(pembuat)) :
@@ -67,8 +66,8 @@ def laporanjin(user,bahan,candi):
     else:
         print(f"> Jin Terajin: -")
         print(f"> Jin Termalas: -")
-    print(f"> Jumlah Pasir: {bahan[1][2]} unit")
-    print(f"> Jumlah Air: {bahan[3][2]} unit")
+    print(f"> Jumlah Pasir: {bahan[3][2]} unit")
+    print(f"> Jumlah Air: {bahan[1][2]} unit")
     print(f"> Jumlah Batu: {bahan[2][2]} unit")
     return
 

@@ -2,8 +2,8 @@ from Utilities import *
 from csvparser import *
 
 
-def laporancandi (data_candi):
-
+def laporancandi ():
+    global data_candi
     
     totalCandi=0
     TotalPasir=0
@@ -45,4 +45,6 @@ def laporancandi (data_candi):
         print(f"> Total Air yang digunakan: {TotalAir}")
         print(f"ID Candi termahal: {candiTermahal} ({HargaTerbesar})")
         print(f"ID Candi termurah: {candiTermurah} ({HargaTerkecil})")
+
+
 
