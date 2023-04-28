@@ -15,6 +15,7 @@ from F10 import *
 from F11 import *
 from F15_16 import *
 from F12 import *
+from F06 import*
 
 ##argparse
 parser = argparse.ArgumentParser(description='Menjalankan program membangun candi')
@@ -76,15 +77,31 @@ while True:
             dataUser = f.hilangkanJin(dataUser)
         else:
             print("hilangkanjin hanya dapat diakses oleh akun Bandung Bondowoso.")
+
     
     #F05 - ubahjin
     elif command =="ubahjin" :
         if role == "bandung_bondowoso" :
-              dataUser = ubahjin(dataUser)
-            
-             
+              dataUser = ubahjin(dataUser)                      
         else:
                 print("ubahjin hanya dapat diakses oleh akun Bandung Bondowoso.")
+
+    #F06 - bangun(jin pembangun)
+    elif command == "bangun" :
+        if role == "jin_pembangun" :
+            print(loggedIn[0])
+            dataBahan, dataCandi  = bangun(loggedIn[0],dataBahan,dataCandi)
+            
+        else : 
+            print("bangun hanya dapat diakses jin pembangun")
+            
+    #F07 - kumpul(jin pengumpul)
+    elif command == "kumpul" :
+        if role == "jin_pengumpul" :
+            dataBahan = kumpul(dataBahan)
+
+        else :
+             print("kumpul hanya dapat diakses jin pengumpul")
          
     #F09
     elif command == "laporanjin":

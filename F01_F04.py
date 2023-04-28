@@ -53,15 +53,15 @@ def summonJin(dataJin):
         print(" (1) Pengumpul - Bertugas mengumpulkan bahan bangunan")
         print(" (2) Pembangun - Bertugas membangun candi")
         while True:
-            Jenis = int(input("Masukkan nomor jenis jin yang dipanggil: "))
+            Jenis = str(input("Masukkan nomor jenis jin yang dipanggil: "))
 
-            if Jenis == 1:
+            if Jenis == "1":
                 print("Memilih jin “Pengumpul”.")
-                Jenis = "pengumpul"
+                Jenis = "jin_pengumpul"
                 break
-            elif Jenis == 2:
+            elif Jenis == "2":
                 print("Memilih jin “Pembangun”.")
-                Jenis = "pembangun"
+                Jenis = "jin_pembangun"
                 break
             else: 
                 print(f"Tidak ada jenis jin bernomor “{Jenis}”!")

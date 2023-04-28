@@ -64,7 +64,7 @@ def laporanjin(user,bahan,candi):
         print(f"> Jin Terajin: -")
         print(f"> Jin Termalas: -")
 
-    print(f"> Jumlah Pasir: {bahan[2][2]} unit")
-    print(f"> Jumlah Air: {bahan[0][2]} unit")
+    print(f"> Jumlah Pasir: {bahan[0][2]} unit")
     print(f"> Jumlah Batu: {bahan[1][2]} unit")
+    print(f"> Jumlah Air: {bahan[2][2]} unit")
     return
