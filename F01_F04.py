@@ -4,11 +4,12 @@ import Utilities as u
 
 def logIn(dataUser : list, loggedIn : list):
 
-    usn = input("Masukkan Username: ")
-    pw = input("Masukkan password: ")
-
     i = 0
     if loggedIn == [None,None]:
+        
+        usn = input("Masukkan Username: ")
+        pw = input("Masukkan password: ")
+        
         while i < u.my_length(dataUser):
             if dataUser[i][0] == usn: #ngecek dataUser
                 if dataUser[i][1] == pw:
@@ -35,6 +36,7 @@ def logIn(dataUser : list, loggedIn : list):
 def logout(loggedIn):
     if loggedIn != [None,None]:
         loggedIn = [None, None]
+        print("Logout Berhasil!"
         return loggedIn
     else:
         print("Logout gagal!")
@@ -45,7 +47,7 @@ def logout(loggedIn):
 
 def summonJin(dataJin):
 
-    if u.my_length(dataJin) > 100:
+    if u.my_length(dataJin) > 103:
         print("Jumlah Jin telah maksimal! (100 jin). Bandung tidak dapat men-summon lebih dari itu")
         return dataJin
     else:
