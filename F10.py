@@ -15,6 +15,7 @@ def laporancandi (data_candi):
     harga_total = [[None for j in range (2)] for i in range(101)]
     HargaTerkecil = 999999
     for i in range (1,101):
+        print (data_candi[i])
         if data_candi[i][1]!=None:
             totalCandi+=1
             TotalPasir+=int(data_candi[i][2])
