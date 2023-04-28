@@ -105,7 +105,7 @@ def hilangkanJin(dataJin):
             ans = str(input("Apakah anda yakin ingin menghapus jin dengan username Jin1 (Y/N)? "))
             if ans  == "Y" or ans == "y":
                 print("Jin telah berhasil dihapus dari alam gaib. ")
-                return u.my_delArray(dataJin, hapus)
+                return u.my_delArray(dataJin, dataJin[i])
             else:
                 print("Tidak ada jin yang terhapus. ")
                 return dataJin
