@@ -4,11 +4,12 @@ import Utilities as u
 
 def logIn(dataUser : list, loggedIn : list):
 
-    usn = input("Masukkan Username: ")
-    pw = input("Masukkan password: ")
-
     i = 0
     if loggedIn == [None,None]:
+        
+        usn = input("Masukkan Username: ")
+        pw = input("Masukkan password: ")
+        
         while i < u.my_length(dataUser):
             if dataUser[i][0] == usn: #ngecek dataUser
                 if dataUser[i][1] == pw:
