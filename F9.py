@@ -29,20 +29,21 @@ def laporanjin(user,bahan,candi):
     print(f"> Total Jin Pengumpul: {totJinkumpul}")
     print(f"> Total Jin Pembangun: {totJinBangun}")
 
-    for i in range(100) :
+    for i in range(1,101) :
         for j in range(jumlahTakNone(pembuat)+1) :
-            if candi[i][1] != None and candi[i][1] == pembuat[j][0] :
+            if candi[i][1] != None and candi[i][1] == pembuat[j][0] and candi[i][0] != '\\':
                 pembuat[j][1] += 1
                 break
-            if candi[i][1] != None and candi[i][1] != pembuat[j][0] :
+            if candi[i][1] != None and candi[i][1] != pembuat[j][0] and candi[i][0] != '\\' :
                 if cek(pembuat,candi[i][1]) == True :
                     pembuat[nomor][0] = candi[i][1]
                     pembuat[nomor][1] = 1
                     nomor += 1
-                    break      
+                    break 
     terkecil = 999999
     terbesar = -999999
     for i in range (jumlahTakNone(pembuat)) :
+
         if pembuat[i][1] > terbesar and pembuat[i][1] != None :
             terbesar =  pembuat[i][1]
             terajin = pembuat[i][0]
@@ -62,7 +63,8 @@ def laporanjin(user,bahan,candi):
     else:
         print(f"> Jin Terajin: -")
         print(f"> Jin Termalas: -")
-    print(f"> Jumlah Pasir: {bahan[3][2]} unit")
-    print(f"> Jumlah Air: {bahan[1][2]} unit")
-    print(f"> Jumlah Batu: {bahan[2][2]} unit")
+
+    print(f"> Jumlah Pasir: {bahan[2][2]} unit")
+    print(f"> Jumlah Air: {bahan[0][2]} unit")
+    print(f"> Jumlah Batu: {bahan[1][2]} unit")
     return
