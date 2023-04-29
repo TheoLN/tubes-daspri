@@ -69,7 +69,7 @@ def laporanjin(user,bahan,candi):
     print(f"> Total Jin Pengumpul: {totJinkumpul}") # mencetak hasil dari jumlah total jin kumpul dan bangun
     print(f"> Total Jin Pembangun: {totJinBangun}") # mencetak hasil dari jumlah total jin kumpul dan bangun
 
-    for i in range(1,101) : # Loop pada matrix candi
+    for i in range(0,101) : # Loop pada matrix candi
         for j in range(jumlahTakNone(pembuat)+1) : # Loop pada matrix pembuat dengan batas elemen yang tidak None tambah satu
             if candi[i][1] != None and candi[i][1] == pembuat[j][0] and candi[i][0] != '\\':
                 # Ketika elemen pada matrix candi tidak None dan tidak merupakan mark, ketika elemen pada candi sama dengan elemen yang ada pada matrox, maka jumlah pada
