@@ -18,7 +18,20 @@ def attach(array  ,x,i = 0):
     else:
        return attach(array,x,i+1)
     
-
+def sort_id(dataCandi):
+    
+    for i in range(my_length(dataCandi)):
+        index_min = i
+        
+        for j in range(i + 1, my_length(dataCandi)):
+            
+            
+            if int(dataCandi[j][0]) < int(dataCandi[index_min][0]):
+                index_min = j
+         
+        (dataCandi[i], dataCandi[index_min]) = (dataCandi[index_min], dataCandi[i])
+    
+    return dataCandi
 
 
 

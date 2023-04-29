@@ -107,7 +107,7 @@ while True:
     #F08 - batchbangun/batchkumpul
     elif command== "batchbangun" :
         if role == "bandung_bondowoso" :
-            batchBangun(dataUser,dataBahan)
+            dataBahan,dataCandi = batchBangun(dataUser,dataBahan,dataCandi)
         else :
             print("batchbangun hanya dapat diakses Bondowoso")
     

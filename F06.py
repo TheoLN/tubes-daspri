@@ -26,14 +26,19 @@ def bangun(Jusn:str, bahan_bangunan:list, candi:list):
             
             
             count = 0
-            for i in range(2+u.my_length(candi)):   
+            
+            for i in range(u.my_length(candi)):  
+                index=i 
+                if not u.Marked(candi[i+1]):
+                    if int(candi[i+1][0]) - int(candi[i][0]) != 1 and count ==0:
+                        i = int(candi[i][0])+1
+                        u.attach(candi,[str(i),Jusn,pasir,batu,air])
+                        count +=1
+
+            if count == 0 :
+                u.attach(candi,[str(index+2),Jusn,pasir,batu,air])
                 
-                temp_array=[i,Jusn,pasir,batu,air]
-                if count == 0 and candi[i][0] == None :
-                    count+=1
-                    
-                u.attach(candi,temp_array)
-                
+            candi = u.sort_id(candi)
             
                     
             pasir_awal = int(bahan_bangunan[0][2])
