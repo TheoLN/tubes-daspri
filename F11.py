@@ -12,32 +12,12 @@ def HancurkanCandi (data_candi) :
             jawab = str(input("Apakah anda yakin ingin menghancurkan candi ID(Y/N): "))
             count = 1
             if jawab == 'Y' or jawab == 'y' :
-                data_candi[i][0] = None
-                data_candi[i][1] = None
-                data_candi[i][2] = None
-                data_candi[i][3] = None
-                data_candi[i][4] = None
+                data_candi = my_dellArray(data_candi, data_candi[i])
                 break
     if count == 0 :
         print("Tidak ada candi dengan  ID tersebut.")
-        return
-    j = 0
+        return data_candi
     
-    for i in range(100) :
-        if data_candi[i][0] != None  :
-            data_candi_temp[j][0] = data_candi[i][0]
-            data_candi_temp[j][1] = data_candi[i][1]
-            data_candi_temp[j][2] = data_candi[i][2]
-            data_candi_temp[j][3] = data_candi[i][3]
-            data_candi_temp[j][4] = data_candi[i][4]
-            j += 1
-
-    for i in range(100):
-        data_candi[i][0] = data_candi_temp[i][0]
-        data_candi[i][1] = data_candi_temp[i][1]
-        data_candi[i][2] = data_candi_temp[i][2]
-        data_candi[i][3] = data_candi_temp[i][3]
-        data_candi[i][4] = data_candi_temp[i][4]
 
 #HancurkanCandi()
 #print(data_candi)
