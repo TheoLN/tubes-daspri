@@ -1,7 +1,11 @@
 import Utilities as u
 # F06 - Jin pembangun
 def bangun(Jusn:str, bahan_bangunan:list, candi:list):
-    banyak_candi = u.my_length(candi)
+    banyak_candi=0
+    for i in range (u.my_length(candi)):
+        if candi[i][0]!= None :
+            banyak_candi +=1
+    
     pasir = u.rng()
     batu = u.rng()
     air = u.rng()
@@ -23,11 +27,13 @@ def bangun(Jusn:str, bahan_bangunan:list, candi:list):
             
             count = 0
             for i in range(2+u.my_length(candi)):   
+                
                 temp_array=[i,Jusn,pasir,batu,air]
                 if count == 0 and candi[i][0] == None :
                     count+=1
                     
-                    u.attach(candi,temp_array)
+                u.attach(candi,temp_array)
+                
             
                     
             pasir_awal = int(bahan_bangunan[0][2])

@@ -132,8 +132,10 @@ while True:
                 print("laporancandi hanya dapat diakses oleh akun Bandung Bondowoso.")
     #F11
     elif command == "hancurkancandi":
+            
             if role == "roro_jonggrang":
-                HancurkanCandi(dataCandi)
+                dataCandi = HancurkanCandi(dataCandi)
+                print(dataCandi)
             else:
                 print("hancurkancandi hanya dapat diakses oleh akun Roro Jonggrang.")
     #F12

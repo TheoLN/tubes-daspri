@@ -18,10 +18,7 @@ def attach(array  ,x,i = 0):
     else:
        return attach(array,x,i+1)
     
-def initial(array, M,) :
-    for i in range(my_length(M)) :
-        array[i], array[i+1] = M[i], MARK
-    return array
+
 
 
 

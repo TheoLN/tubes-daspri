@@ -32,7 +32,7 @@ def HancurkanCandi (data_candi) :
                 data_candi[i][4] = None
                 print("")
                 print("Candi berhasil dihancurkan")
-                
+                break
     if count == 0 : # Jika count = 0 maka pada loop tidak ditemukan id yang sesuai
         print("")
         print("Tidak ada candi dengan  ID tersebut.")
@@ -40,7 +40,7 @@ def HancurkanCandi (data_candi) :
         return
     j = 0
     
-    for i in range(100) : 
+    for i in range(my_length(data_candi)) : 
         # Perulangan untuk memeberi nilai pada matrix data candi baru yang diberi nilai dari elemen-elemen pada matrix data candi jika elemennya tidak None
         if data_candi[i][0] != None  :
             data_candi_temp[j][0] = data_candi[i][0]
@@ -49,7 +49,8 @@ def HancurkanCandi (data_candi) :
             data_candi_temp[j][3] = data_candi[i][3]
             data_candi_temp[j][4] = data_candi[i][4]
             j += 1
-
+    data_candi_temp[j] = u.MARK #menambah mark setelah data terakhir
+            
     return data_candi_temp
 
 #HancurkanCandi()
