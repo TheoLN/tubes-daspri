@@ -36,7 +36,7 @@ def logIn(dataUser : list, loggedIn : list):
 def logout(loggedIn):
     if loggedIn != [None,None]:
         loggedIn = [None, None]
-        print("Logout Berhasil!"
+        print("Logout Berhasil!")
         return loggedIn
     else:
         print("Logout gagal!")

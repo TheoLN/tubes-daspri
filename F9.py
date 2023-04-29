@@ -29,7 +29,7 @@ def laporanjin(user,bahan,candi):
     print(f"> Total Jin Pengumpul: {totJinkumpul}")
     print(f"> Total Jin Pembangun: {totJinBangun}")
 
-    for i in range(1,101) :
+    for i in range(101) :
         for j in range(jumlahTakNone(pembuat)+1) :
             if candi[i][1] != None and candi[i][1] == pembuat[j][0] and candi[i][0] != '\\':
                 pembuat[j][1] += 1
