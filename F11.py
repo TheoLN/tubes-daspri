@@ -19,7 +19,7 @@ def HancurkanCandi (data_candi) :
     id = int(input("Masukkan ID candi : ")) # Input nilai candi yang ingin dihancurkan
     count = 0
     data_candi_temp = [[None for i in range (5)] for j in range(101)] # Matriks sebagai pengubah dari matrix candi
-    for i in range (0,100):
+    for i in range (my_length(data_candi)):
         # Loop untuk mencari id candi yang ingin dihancurkan
         if data_candi[i][0]!=None and int(data_candi[i][0]) == id : # Kondisi ketika matrix candi tak None dan elemen pada matrix candi sama dengan id
             jawab = input("Apakah anda yakin ingin menghancurkan candi ID(Y/N): ") # Meminta input user berupa string untuk memastikan
@@ -32,7 +32,7 @@ def HancurkanCandi (data_candi) :
                 data_candi[i][4] = None
                 print("")
                 print("Candi berhasil dihancurkan")
-                break
+                
     if count == 0 : # Jika count = 0 maka pada loop tidak ditemukan id yang sesuai
         print("")
         print("Tidak ada candi dengan  ID tersebut.")
