@@ -73,10 +73,9 @@ def summonJin(dataJin):
             Jusn = str(input("Masukkan username jin: "))
             
             bool = False
-            for i in range (my_length(array)):
-                if is_Elmt(x,array):
+            for i in range (u.my_length(dataJin)):
+                if Jusn == dataJin[i][0]:
                     bool = True
-                    break
             
             if not bool:
                 while True:
