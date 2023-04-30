@@ -100,20 +100,29 @@ def summonJin(dataJin):
 
 #F04 -- HilangkanJin
 
-def hilangkanJin(dataJin):
+def hilangkanJin(dataJin,datacandi):
     hapus = input("Masukkan username jin : ")
     for i in range (u.my_length(dataJin)):
         if dataJin[i][0] == hapus:
             ans = str(input("Apakah anda yakin ingin menghapus jin dengan username Jin1 (Y/N)? "))
             if ans  == "Y" or ans == "y":
                 print("Jin telah berhasil dihapus dari alam gaib. ")
-                return u.my_delArray(dataJin, dataJin[i])
+                
+                j = 0
+                while datacandi[j] != u.MARK:
+                    if datacandi[j][1] == hapus:
+                        datacandi = u.my_delArray(datacandi, datacandi[j])
+                    else:
+                        j += 1
+              
+                return (u.my_delArray(dataJin, dataJin[i]),datacandi)
+              
+              
             else:
                 print("Tidak ada jin yang terhapus. ")
                 return dataJin
     print("Tidak ada jin dengan username tersebut.")
     return dataJin
-
 
 
 
