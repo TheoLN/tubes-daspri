@@ -4,17 +4,17 @@ import time
 MARK = "\\mark"
 NMAX = 111
 
-def Marked(arr) :
-    return arr == MARK
+'''def Marked(arr) :
+    return arr == MARK'''
 
 def my_length(array : list ,i = 0):
-    if Marked(array[i]):
+    if array[i] == MARK:
         return i
     else:
         return my_length(array,i+1)
 
 def attach(array  ,x,i = 0):
-    if Marked(array[i]):
+    if array[i] == MARK:
         array[i], array[i + 1] = x, MARK
         return array
     else:
@@ -45,8 +45,8 @@ def konsdot(x, array : list):
         
 
 
-def head(arr : list) :
-    return arr[0]
+'''def head(arr : list) :
+    return arr[0]'''
 
 def tail(arr : list):
     temp = [None for i in range (NMAX)]
@@ -65,56 +65,11 @@ def my_delArray (array : list, x):
         return konsdot(array[0],my_delArray(tail(array),x))
 
 
-def my_strip(string : str, str):
-
-    array = list(string)
-
-    i = 0
-    j = array[i]
-    newstring = ""
-    while j != str:
-        newstring += j
-        i += 1
-        j = array[i]
-    
-    return newstring
-
-
-def isElmt(x,array: list):
-    for i in range(my_length(array)):
-        if x == array[i]:
-            return True
-    else:
-        return False
-    
-def my_count(x, array:list):
-    if array == []:
-        return 0
-    elif array[0] != x :
-        if my_length(array) > 1:
-            return 0 + my_count(x, tail(array))
-        else: 
-            return 0
-    else:
-        if my_length(array) > 1:
-            return 1 + my_count(x, tail(array))
-        else:
-            return 1
-
 
 
 
 
 ### SPECIAL CASE FUNCTIONS
-
-def isAvailable(x, array): #check username availibility in matrix
-    for i in range (0,my_length(array)):
-        if isElmt(x,array):
-            return False
-        else:
-            continue
-    return True
-
 
 
 seed: int
