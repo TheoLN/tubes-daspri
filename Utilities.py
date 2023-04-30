@@ -1,3 +1,5 @@
+import time
+
 ### COMMON CASE FUNCTIONS
 MARK = "\\mark"
 NMAX = 111
@@ -113,18 +115,24 @@ def isAvailable(x, array): #check username availibility in matrix
             continue
     return True
 
+
+
+seed: int
+seed = int(time.time())
+
 def lcg(seed):
-    a = 1103515245
+    a = 110351432445
     c = 12345
     m = 2**31
-    x = seed
-    while True:
-        x = (a * x + c) % m
-        yield x
+
+    seed = (a* seed + c) % m
+    return seed
 
 def rng():
-    gen = lcg(seed=42)
-    return 1 + next(gen) % 5
+    global seed
+    seed = lcg(seed)
+    if  (1 + seed % 5) < 6:
+        return (1 + seed % 5)
 
     
 
