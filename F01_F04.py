@@ -47,7 +47,7 @@ def logout(loggedIn):
 
 def summonJin(dataJin):
 
-    if u.my_length(dataJin) > 103:
+    if u.my_length(dataJin) > 102:
         print("Jumlah Jin telah maksimal! (100 jin). Bandung tidak dapat men-summon lebih dari itu")
         return dataJin
     else:
