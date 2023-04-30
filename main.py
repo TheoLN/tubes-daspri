@@ -135,13 +135,14 @@ while True:
             
             if role == "roro_jonggrang":
                 dataCandi = HancurkanCandi(dataCandi)
-                print(dataCandi)
+                
             else:
                 print("hancurkancandi hanya dapat diakses oleh akun Roro Jonggrang.")
     #F12
     elif command == "ayamberkokok":
             if role == "roro_jonggrang":
                 AyamBerkokok(dataCandi)
+                exit_program(dataBahan,dataCandi,dataUser)
             else:
                 print("ayamberkokok hanya dapat diakses oleh akun Roro Jonggrang.")
         

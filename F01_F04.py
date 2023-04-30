@@ -124,9 +124,9 @@ def hilangkanJin(dataJin,datacandi):
               
             else:
                 print("Tidak ada jin yang terhapus. ")
-                return dataJin
+                return dataJin,datacandi
     print("Tidak ada jin dengan username tersebut.")
-    return dataJin
+    return dataJin,datacandi
 
 
 
