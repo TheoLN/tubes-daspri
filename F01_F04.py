@@ -71,9 +71,14 @@ def summonJin(dataJin):
         i = 0
         while True:
             Jusn = str(input("Masukkan username jin: "))
-
-            if u.isAvailable(Jusn,dataJin):
-
+            
+            bool = False
+            for i in range (my_length(array)):
+                if is_Elmt(x,array):
+                    bool = True
+                    break
+            
+            if not bool:
                 while True:
                     Jpw = str(input("Masukkan password jin: ")) 
                     temp = Jpw + u.MARK
