@@ -30,11 +30,15 @@ def bangun(Jusn:str, bahan_bangunan:list, candi:list):
             for i in range(u.my_length(candi)):  
                 index=i 
                 if (candi[i+1])!= u.MARK:
-                    if int(candi[i+1][0]) - int(candi[i][0]) != 1 and count ==0:
+                    if int(candi[0][0]) != 1 and count ==0 :
+                        u.attach(candi,["1",Jusn,pasir,batu,air])
+                        count+=1
+                    elif int(candi[i+1][0]) - int(candi[i][0]) != 1 and count ==0:
                         i = int(candi[i][0])+1
                         u.attach(candi,[str(i),Jusn,pasir,batu,air])
                         count +=1
-
+            if u.my_length(candi) == 0 :
+                index = -1
             if count == 0 :
                 u.attach(candi,[str(index+2),Jusn,pasir,batu,air])
                 
