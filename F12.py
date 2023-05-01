@@ -18,7 +18,7 @@ def AyamBerkokok(data_candi) :
     count = 0
     for i in range (100) :
         # Loop untuk mencari jumlah elemen pada kolom id yang tidak None dan tidak sama dengan mark
-        if data_candi[i][0]!= None and data_candi[i] != "\mark": # Jika kondisi memenuhi count yang merupakan jumlah dari candi akan bertambah satu
+        if data_candi[i][0]!= None and data_candi[i] != "\\mark": # Jika kondisi memenuhi count yang merupakan jumlah dari candi akan bertambah satu
             count += 1 
     print("Jumlah Candi: ", count)
     print("")
