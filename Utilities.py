@@ -86,8 +86,8 @@ def lcg(seed):
 def rng():
     global seed
     seed = lcg(seed)
-    if  (seed % 100) < 6:
-        return (seed % 100)
+    if  (1+seed % 100) < 6:
+        return (1+seed % 100)
     else:
         return rng()
 
