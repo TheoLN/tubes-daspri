@@ -8,7 +8,7 @@ def exit_program (dataBahan,dataCandi,dataUser) :
     elif choice =='N' or choice=='n' :
         exit()
     else :
-        exit_program()
+        exit_program(dataBahan,dataCandi,dataUser)
 
 
 

@@ -32,7 +32,7 @@ def my_csvread(file,loaded_folder):
 
 # return dalam bentuk nested list 
 
-#print(my_csvread("user.csv"))
+
 
 
 def initial_data (file,loaded_folder) :  ## menyiapkan initial data untuk main
